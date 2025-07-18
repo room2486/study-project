@@ -7,11 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
+      <profile name="Annotation profile for study-base" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../java_develop/apache-maven-3.9.9/mvn_deport/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
+        </processorPath>
+        <module name="study-base" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="study-base" options="-parameters" />
       <module name="study-parent" options="-parameters" />
     </option>
   </component>
