@@ -2,19 +2,24 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
       </profile>
-      <profile name="Annotation profile for study-base" enabled="true">
+      <profile name="Annotation profile for study-content" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../java_develop/apache-maven-3.9.9/mvn_deport/org/projectlombok/lombok/1.18.8/lombok-1.18.8.jar" />
         </processorPath>
+        <module name="study-content-model" />
+        <module name="xuecheng-plus-generator" />
+        <module name="study-content-service" />
         <module name="study-base" />
+        <module name="study-content-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
@@ -22,7 +27,12 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="study-base" options="-parameters" />
+      <module name="study-content" options="-parameters" />
+      <module name="study-content-api" options="-parameters" />
+      <module name="study-content-model" options="-parameters" />
+      <module name="study-content-service" options="-parameters" />
       <module name="study-parent" options="-parameters" />
+      <module name="xuecheng-plus-generator" options="-parameters" />
     </option>
   </component>
 </project>
