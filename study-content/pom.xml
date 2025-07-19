@@ -10,7 +10,7 @@
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>study-content</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+
 	<name>study-content</name>
 	<description>study-content</description>
 	<modules>
